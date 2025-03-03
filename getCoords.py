@@ -1,4 +1,5 @@
 import requests
+import csv
 from geopy.geocoders import Nominatim
 
 def get_coordinates(address):
@@ -9,7 +10,7 @@ def get_coordinates(address):
     else:
         return None
 
-def main():
+def user_input():
     while True:
         address = input("Enter address: ")
         
@@ -36,6 +37,15 @@ def create_csv():
                 writer.writerow([address, "Not found", "Not found"])
                 print(f"{address}\nCoordinates: Not found\n")
 
+def main():
+    choice = input("To enter manually press 1 or to save as CSV file press 2: ").strip()
+    
+    if choice == "1":
+        user_input()
+    elif choice == "2":
+        create_csv()
+    else:
+        print("Invalid choice. Please enter 1 or 2.")
+
 if __name__ == "__main__":
     main()
-
