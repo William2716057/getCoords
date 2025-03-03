@@ -10,14 +10,11 @@ def get_coordinates(address):
         return None
 
 def main():
-    addresses = input("Enter address")
-   # addresses = [
-    #    "1600 Amphitheatre Parkway, Mountain View, CA",
-    #   "221B Baker Street, London",
-    #  "Eiffel Tower, Paris"
-    #]
-    
-    for address in addresses:
+    while True:
+        address = input("Enter address: ")
+        #if address.lower() == 'exit':
+        #    break
+        
         coords = get_coordinates(address)
         if coords:
             print(f"{address}\nCoordinates: {coords}\n")
