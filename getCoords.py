@@ -26,16 +26,15 @@ def create_csv():
 
     with open("addresses.csv", "w", newline="") as file:
         writer = csv.writer(file)
-        writer.writerow(["Address", "Latitude", "Longitude"])
+        writer.writerow(["Address", "Latitude", "Longitude"]) #add time column later
 
         for address in addresses:
             coords = get_coordinates(address)
             if coords:
                 writer.writerow([address, coords[0], coords[1]])
-                print(f"{address}\nCoordinates: {coords}\n")
             else:
                 writer.writerow([address, "Not found", "Not found"])
-                print(f"{address}\nCoordinates: Not found\n")
+
 
 def main():
     choice = input("To enter manually press 1 or to save as CSV file press 2: ").strip()
