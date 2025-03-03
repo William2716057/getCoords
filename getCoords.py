@@ -10,11 +10,12 @@ def get_coordinates(address):
         return None
 
 def main():
-    addresses = [
-        "1600 Amphitheatre Parkway, Mountain View, CA",
-        "221B Baker Street, London",
-        "Eiffel Tower, Paris"
-    ]
+    addresses = input("Enter address")
+   # addresses = [
+    #    "1600 Amphitheatre Parkway, Mountain View, CA",
+    #   "221B Baker Street, London",
+    #  "Eiffel Tower, Paris"
+    #]
     
     for address in addresses:
         coords = get_coordinates(address)
