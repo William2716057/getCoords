@@ -36,3 +36,26 @@ pip install geopy
 - Prompts the user to enter multiple addresses.
 - Fetches coordinates and writes them to addresses.csv.
 - Saves the data in a structured format for easy reference.
+
+### Example Output
+
+#### Manual Mode
+```
+Enter address: Times Square, New York
+Times Square, New York
+Coordinates: (40.7580, -73.9855)
+```
+#### CSV Output (addresses.csv)
+```
+Address,Latitude,Longitude
+Times Square, New York,40.7580,-73.9855
+Eiffel Tower, Paris,48.8584,2.2945
+Unknown Address,Not found,Not found
+```
+## Potential Use Cases
+
+- OSINT (Open Source Intelligence) for data collection
+- Automating geolocation for research and analysis
+- Creating datasets for mapping and visualization
+- Preprocessing address data for further geospatial applications
+
